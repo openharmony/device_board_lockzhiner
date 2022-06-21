@@ -1,0 +1,8 @@
+config BOARD_LOCKZHINER_RK2206
+    bool "select board lockzhiner_rk2206"
+    depends on SOC_RK2206
+
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+    int
+    default 1000
+    

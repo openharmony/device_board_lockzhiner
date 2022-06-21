@@ -1,7 +1,7 @@
 # device_board_lockzhiner
 
 #### Description
-该仓库托管福州市凌睿智捷电子有限公司开发的产品样例代码，主要包括（1）小凌派-RK2206开发板 。该开发板主控器为瑞芯微高性能、高性价比的RK2206芯片，搭载OpenHarmony操作系统，内置WiFi/AP功能、NFC功能、液晶显示接口以及E53接口，E53接口兼容各类传感器模块。
+{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
 
 #### Software Architecture
 Software architecture description
