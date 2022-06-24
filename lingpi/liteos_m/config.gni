@@ -67,7 +67,6 @@ board_ld_flags_xts = [
 board_ld_flags_lockzhiner = [
   "-Llibs",
   "-lblackbox",
-  "-lcjson_static",
   "-ldump_static",
   "-lhal_file_static",
   "-lhal_sysparam",
@@ -101,14 +100,7 @@ board_ld_flags_lockzhiner = [
   "-lbroadcast",
   "-lhal_iothardware",
   "-lhardware",
-  # 内核类
-  #"-ltask_helloworld",
-  #"-ltask_example",
-  #"-lsemaphore_example",
-  #"-ltimer_example",
-  #"-lmutex_example",
-  #"-lqueue_example",
-  #"-levent_example",
+  "-lcjson_static",
   "-Wl,--no-whole-archive",
   "-Wl,--end-group",
 ]
@@ -120,7 +112,7 @@ board_cflags = [
   "--inline",
   "-ggdb",
   "-gdwarf-2",
-  "-O1",
+  "-O0",
   "-ffunction-sections",
   "-fdata-sections",
   "-mcpu=cortex-m4",
@@ -132,6 +124,7 @@ board_cflags = [
   "-MD",
   "-fno-stack-protector",
   "-Wall",
+  "-D_BSD_SOURCE",
 ]
 board_cxx_flags = []
 board_ld_flags = [
@@ -147,12 +140,6 @@ board_ld_flags = [
   "-Wl,-Tbin/board.ld",
   "-nostdlib",
   "--specs=nosys.specs",
-  #"-Wl,--wrap=_malloc_r", 
-  #"-Wl,--wrap=_realloc_r", 
-  #"-Wl,--wrap=_reallocf_r", 
-  #"-Wl,--wrap=_free_r", 
-  #"-Wl,--wrap=_memalign_r", 
-  #"-Wl,--wrap=_malloc_usable_size_r",
   "-Wl,--wrap=printf", 
   "-Wl,--wrap=sprintf", 
   "-Wl,--wrap=snprintf", 
@@ -175,17 +162,7 @@ board_ld_flags += board_ld_flags_xts
 board_include_dirs = [
   "//device/soc/rockchip/rk2206/hardware/include",
   "//device/soc/rockchip/rk2206/hardware/lib/CMSIS/Device/RK2206/Include",
-  #"//kernel/liteos_m/kal/posix/include",
-  #"//kernel/liteos_m/kernel/include",
-  #"//kernel/liteos_m/kernel/arch/include",
-  #"//kernel/liteos_m/kernel/arch/arm/cortex-m4/gcc",
-  #"//kernel/liteos_m/utils",
-  #"//kernel/liteos_m/kal/cmsis",
-  #"//kernel/liteos_m/components/net/lwip-2.1/porting/include",
-  #"//kernel/liteos_m/kal/libc/newlib/porting/include",
-  #"//third_party/lwip/src/include",
   "//third_party/musl/porting/liteos_m/kernel/include",
-  #"//kernel/liteos_m/kal/libc/newlib/porting/include",
   "//utils/native/lite/include",
   "//third_party/mbedtls/include",
 ]
