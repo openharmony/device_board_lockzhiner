@@ -155,7 +155,7 @@ board_ld_flags = [
   "-Wl,--gc-sections",
 ]
 board_ld_flags += board_ld_flags_lockzhiner
-board_ld_flags += board_ld_flags_xts
+#board_ld_flags += board_ld_flags_xts
 
 
 # Board related headfiles search path.
