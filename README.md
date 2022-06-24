@@ -12,7 +12,7 @@
 代码路径：
 
 ```
-device/board/lockzhiner/                     --- vendor_lockzhiner 仓库路径
+device/board/lingpi/                     --- vendor_lockzhiner 仓库路径
 └── BUILD.gn
 └── Kconfig.liteos_m.boards
 └── Kconfig.liteos_m.defconfig.boards
