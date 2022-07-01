@@ -15,17 +15,17 @@
 代码路径：
 
 ```
-device/board/lockzhiner/                    # vendor_lockzhiner 仓库路径
+device/board/lockzhiner/                 # vendor_lockzhiner 仓库路径
 └── BUILD.gn
 └── Kconfig.liteos_m.boards
 └── Kconfig.liteos_m.defconfig.boards
-└── lingpi				    # 小凌派-RK2206开发板的目录
+└── lingpi				                 # 小凌派-RK2206开发板的目录
     └── BUILD.gn
     └── Kconfig.liteos_m.board
     └── Kconfig.liteos_m.defconfig.board
     └── liteos_m		
         └── BUILD.gn
-        └── config.gni			    # 交叉编译脚本
+        └── config.gni			         # 交叉编译脚本
 └── README.md
 ```
 
