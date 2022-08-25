@@ -39,10 +39,11 @@ board_toolchain_prefix = "arm-none-eabi-"
 # Compiler type, "gcc" or "clang".
 board_toolchain_type = "gcc"
 
-# xts ldflags 
+# xts ldflags
 board_ld_flags_xts = [
   "-Wl,--start-group",
   "-Wl,--whole-archive",
+
   # xts测试套件
   "-lhal_update_static",
   "-lhctest",
@@ -83,6 +84,7 @@ board_ld_flags_lockzhiner = [
   "-lsysparam",
   "-lwifiaware",
   "-lwifiservice",
+
   # 特殊处理的静态库
   "-Wl,--start-group",
   "-Wl,--whole-archive",
@@ -131,11 +133,11 @@ board_ld_flags = [
   "-Wl,-Tbin/board.ld",
   "-nostdlib",
   "--specs=nosys.specs",
-  "-Wl,--wrap=printf", 
-  "-Wl,--wrap=sprintf", 
-  "-Wl,--wrap=snprintf", 
-  "-Wl,--wrap=vsnprintf", 
-  "-Wl,--wrap=vprintf", 
+  "-Wl,--wrap=printf",
+  "-Wl,--wrap=sprintf",
+  "-Wl,--wrap=snprintf",
+  "-Wl,--wrap=vsnprintf",
+  "-Wl,--wrap=vprintf",
   "-Wl,--gc-sections",
   "-Wl,--start-group",
   "-Wl,--whole-archive",
@@ -146,8 +148,8 @@ board_ld_flags = [
   "-Wl,--gc-sections",
 ]
 board_ld_flags += board_ld_flags_lockzhiner
-#board_ld_flags += board_ld_flags_xts
 
+#board_ld_flags += board_ld_flags_xts
 
 # Board related headfiles search path.
 board_include_dirs = [
