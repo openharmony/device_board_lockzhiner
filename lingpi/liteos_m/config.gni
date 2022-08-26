@@ -39,10 +39,11 @@ board_toolchain_prefix = "arm-none-eabi-"
 # Compiler type, "gcc" or "clang".
 board_toolchain_type = "gcc"
 
-# xts ldflags 
+# xts ldflags
 board_ld_flags_xts = [
   "-Wl,--start-group",
   "-Wl,--whole-archive",
+
   # xts测试套件
   "-lhal_update_static",
   "-lhctest",
@@ -67,39 +68,31 @@ board_ld_flags_xts = [
 board_ld_flags_lockzhiner = [
   "-Llibs",
   "-lblackbox",
-  "-ldump_static",
-  "-lhal_file_static",
   "-lhal_sysparam",
-  "-lhal_token_static",
   "-lhal_wifiaware",
-  "-lhichainsdk",
   "-lhidumper_mini",
   "-lhievent_lite",
   "-lhilog_lite",
   "-lhilog_static",
   "-lhiview_lite",
-  "-lhuks_3.0_sdk",
-  "-lkernel",
   "-lmbedtls",
   "-lmusl-c",
   "-lmusl-m",
-  "-lnative_file",
   "-lsamgr",
   "-lsamgr_adapter",
   "-lsamgr_source",
-  "-lsec_static",
   "-lsysparam",
-  "-ltoken_static",
-  "-lutils_kv_store",
   "-lwifiaware",
   "-lwifiservice",
+
   # 特殊处理的静态库
   "-Wl,--start-group",
   "-Wl,--whole-archive",
   "-lbootstrap",
   "-lbroadcast",
-  "-lhal_iothardware",
   "-lhardware",
+  "-lkernel",
+  "-lhal_iothardware",
   "-lcjson_static",
   "-Wl,--no-whole-archive",
   "-Wl,--end-group",
@@ -140,11 +133,11 @@ board_ld_flags = [
   "-Wl,-Tbin/board.ld",
   "-nostdlib",
   "--specs=nosys.specs",
-  "-Wl,--wrap=printf", 
-  "-Wl,--wrap=sprintf", 
-  "-Wl,--wrap=snprintf", 
-  "-Wl,--wrap=vsnprintf", 
-  "-Wl,--wrap=vprintf", 
+  "-Wl,--wrap=printf",
+  "-Wl,--wrap=sprintf",
+  "-Wl,--wrap=snprintf",
+  "-Wl,--wrap=vsnprintf",
+  "-Wl,--wrap=vprintf",
   "-Wl,--gc-sections",
   "-Wl,--start-group",
   "-Wl,--whole-archive",
@@ -155,8 +148,8 @@ board_ld_flags = [
   "-Wl,--gc-sections",
 ]
 board_ld_flags += board_ld_flags_lockzhiner
-#board_ld_flags += board_ld_flags_xts
 
+#board_ld_flags += board_ld_flags_xts
 
 # Board related headfiles search path.
 board_include_dirs = [
