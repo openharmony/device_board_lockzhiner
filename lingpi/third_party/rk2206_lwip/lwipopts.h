@@ -142,7 +142,7 @@
 #define MEMP_NUM_ARP_QUEUE              (65535 * LWIP_CONFIG_NUM_SOCKETS / (IP_FRAG_MAX_MTU - 20 - 8))
 #define MEMP_NUM_NETBUF                 (65535 * 3 * LWIP_CONFIG_NUM_SOCKETS / (IP_FRAG_MAX_MTU - 20 - 8))
 #define MEMP_NUM_NETCONN                LWIP_CONFIG_NUM_SOCKETS
-#define MEMP_NUM_PBUF                   LWIP_CONFIG_NUM_SOCKETS*2
+#define MEMP_NUM_PBUF                   ((LWIP_CONFIG_NUM_SOCKETS) * 2)
 #define MEMP_NUM_RAW_PCB                LWIP_CONFIG_NUM_SOCKETS
 #define MEMP_NUM_REASSDATA              (IP_REASS_MAX_MEM_SIZE / 65535)
 #define MEMP_NUM_TCPIP_MSG_API          64
@@ -161,7 +161,7 @@
 #define TCP_MAXRTX                      64
 #define TCP_MSS                         1400
 #define TCP_SND_BUF                     65535
-#define TCP_SND_QUEUELEN                (8 * TCP_SND_BUF) / TCP_MSS
+#define TCP_SND_QUEUELEN                ((8 * (TCP_SND_BUF)) / (TCP_MSS))
 #define TCP_TTL                         255
 #define TCP_WND                         32768
 #define UDP_TTL                         255
