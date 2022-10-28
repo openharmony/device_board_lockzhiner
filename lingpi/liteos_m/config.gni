@@ -68,7 +68,6 @@ board_ld_flags_xts = [
 board_ld_flags_lockzhiner = [
   "-Llibs",
   "-lblackbox",
-  "-lhal_sysparam",
   "-lhal_wifiaware",
   "-lhal_token_static",
   "-lhidumper_mini",
@@ -154,6 +153,7 @@ board_include_dirs = [
   "//third_party/musl/porting/liteos_m/kernel/include",
   "//utils/native/lite/include",
   "//third_party/mbedtls/include",
+  "//commonlibrary/utils_lite/include",
 ]
 
 # Board adapter dir for OHOS components.
